@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pet_id: 1
+  quantity: 1
+  status: MyString
+  ship_date: 2014-04-30 11:31:25
+
+two:
+  pet_id: 1
+  quantity: 1
+  status: MyString
+  ship_date: 2014-04-30 11:31:25
