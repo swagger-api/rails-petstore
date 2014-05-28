@@ -29,11 +29,12 @@ group :production do
 end
 
 group :development do
+  gem 'debugger'
   gem 'sqlite3'
 end
 
 #grape api
 gem "grape",                      "0.7.0"
-gem "grape-swagger",              :git => "git://github.com/chebyte/grape-swagger.git", :branch => "master"
 gem "grape-entity",               "0.4.2"
+gem "grape-swagger",              :git => "git://github.com/CraigCottingham/grape-swagger.git", :branch => "swagger-ui"
 gem "rack-cors",                  "0.2.9", :require => 'rack/cors'
