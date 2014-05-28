@@ -4,6 +4,7 @@ module V1
     # get /pet/{petId}
     desc "Find pet by ID", {
       nickname: "getPetById",
+      entity: "Entities::Pet",
       notes: "Returns a pet based on ID",
       http_codes: {
         400 => "Invalid ID supplied",
@@ -103,6 +104,7 @@ module V1
     # get /pet/findByStatus
     desc "Finds Pets by status", {
       nickname: "findPetsByStatus",
+      entity: "Entities::Pet",
       notes: "Multiple status values can be provided with comma seperated strings",
       http_codes: {
         400 => "Invalid status value",
@@ -114,6 +116,7 @@ module V1
     # get /pet/findByTags
     desc "Finds Pets by tags", {
       nickname: "findPetsByTags",
+      entity: "Entities::Pet",
       notes: "Muliple tags can be provided with comma seperated strings. Use tag1, tag2, tag3 for testing.",
       http_codes: {
         400 => "Invalid tag value",
