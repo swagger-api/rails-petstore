@@ -14,12 +14,11 @@ To run the server, run this task:
 bundle update
 rake db:migrate
 rails s
-
 ```
 
 Note if you have trouble with `bundle update`, please make sure you have postgres installed--rails is expecting it, even though it's not using the database at all.
 
-This will start Jetty embedded on port 3000.
+This will start rails on port 3000.
 
 ### Testing the server
 Once started, you can navigate to http://localhost:3000/api/api-docs to view the Swagger Resource Listing.
