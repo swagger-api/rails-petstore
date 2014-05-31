@@ -33,6 +33,8 @@ module V1
     # patch /pet/{petId}
     desc "partial updates to a pet", {
       nickname: "partialUpdate",
+      entity: "Entities::Pet",
+      is_array: true,
       http_codes: {
         400 => "Invalid tag value",
       }
