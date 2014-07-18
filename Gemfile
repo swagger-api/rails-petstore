@@ -21,7 +21,7 @@ group :development do
   gem "sqlite3"
 end
 
-gem "grape",          "0.7.0"
-gem "grape-entity",   "0.4.2"
+gem "grape",          "0.8.0"
+gem "grape-entity",   "0.4.3"
 gem "grape-swagger",  :git => "git://github.com/CraigCottingham/grape-swagger.git", :branch => "swagger-ui"
 gem "rack-cors",      "0.2.9", :require => "rack/cors"
