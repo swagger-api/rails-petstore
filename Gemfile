@@ -1,7 +1,5 @@
 source "https://rubygems.org"
 
-ruby "2.0.0"
-
 gem "rails",          "4.0.2"
 
 gem "coffee-rails",   "~> 4.0.0"
@@ -17,11 +15,11 @@ group :production do
 end
 
 group :development do
-  gem "debugger"
-  gem "sqlite3"
+  gem "byebug",       "4.0.5"
+  gem "sqlite3",      "1.3.9"
 end
 
-gem "grape",          "0.7.0"
-gem "grape-entity",   "0.4.2"
-gem "grape-swagger",  :git => "git://github.com/CraigCottingham/grape-swagger.git", :branch => "swagger-ui"
+gem "grape",          "0.8.0"
+gem "grape-entity",   "0.4.3"
+gem "grape-swagger",  "0.10.1"
 gem "rack-cors",      "0.2.9", :require => "rack/cors"

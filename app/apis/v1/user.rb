@@ -33,7 +33,7 @@ module V1
     # get /user/{username}
     desc "Get user by user name", {
       nickname: "getPetById",
-      entity: "Entities::User",
+      entity: Entities::User,
       http_codes: {
         400 => "Invalid username supplied",
         404 => "User not found",
@@ -48,7 +48,7 @@ module V1
     # get /user/login
     desc "Logs user into the system", {
       nickname: "getPetById",
-      entity: "string",
+      # entity: "string",
       http_codes: {
         400 => "Invalid username and password combination",
       }
