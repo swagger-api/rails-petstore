@@ -4,7 +4,7 @@ module V1
     # get /pet/{petId}
     desc "Find pet by ID", {
       nickname: "getPetById",
-      entity: "Entities::Pet",
+      entity: Entities::Pet,
       notes: "Returns a pet based on ID",
       http_codes: {
         400 => "Invalid ID supplied",
@@ -33,7 +33,7 @@ module V1
     # patch /pet/{petId}
     desc "partial updates to a pet", {
       nickname: "partialUpdate",
-      entity: "Entities::Pet",
+      entity: Entities::Pet,
       is_array: true,
       http_codes: {
         400 => "Invalid tag value",
@@ -41,7 +41,7 @@ module V1
     }
     params do
       requires :petId, type: Integer, desc: "ID of pet that needs to be fetched"
-      requires :body, type: Entities::Pet, desc: "Pet object that needs to be added to the store"
+      requires :data, type: String, desc: "Pet object that needs to be added to the store"
     end
     patch "/pet/:petId" do
     end
@@ -80,10 +80,10 @@ module V1
       }
     }
     params do
-      requires :body, type: Entities::Pet
+      requires :data, type: String, desc: "Pet object that needs to be added to the store"
     end
     post :pet do
-      pet = ::Pet.new(params[:body])
+      pet = ::Pet.new(JSON.parse(params[:data]))
       present pet, with: Entities::Pet
     end
 
@@ -106,7 +106,7 @@ module V1
     # get /pet/findByStatus
     desc "Finds Pets by status", {
       nickname: "findPetsByStatus",
-      entity: "Entities::Pet",
+      entity: Entities::Pet,
       is_array: true,
       notes: "Multiple status values can be provided with comma seperated strings",
       http_codes: {
@@ -119,7 +119,7 @@ module V1
     # get /pet/findByTags
     desc "Finds Pets by tags", {
       nickname: "findPetsByTags",
-      entity: "Entities::Pet",
+      entity: Entities::Pet,
       is_array: true,
       notes: "Muliple tags can be provided with comma seperated strings. Use tag1, tag2, tag3 for testing.",
       http_codes: {
